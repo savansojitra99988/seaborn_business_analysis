@@ -1,6 +1,6 @@
+# 🛒 E‑Commerce Sales & Customer Analysis
+
 <div align="center">
-
-
 
 <img src="https://img.shields.io/badge/Python-Data%20Analysis-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
 <img src="https://img.shields.io/badge/Pandas-Data%20Cleaning-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
@@ -12,334 +12,133 @@
 
 </div>
 
-🛒 E-Commerce Sales & Customer Analysis
+---
 
-A complete exploratory data analysis and visualization project built using the UCI Online Retail Dataset.
+## 🎯 Overview
 
-The main goal of this project is to understand e-commerce sales, products, customers, countries, transaction patterns and numerical relationships using Python.
+A complete **exploratory data analysis and visualization project** built using the **UCI Online Retail Dataset**.
 
-The project places special focus on Seaborn, covering visualization techniques from basic to advanced.
+The goal is to understand **sales, products, customers, countries, transaction patterns**, and **numerical relationships** using Python — with a special focus on **Seaborn** for visualization.
 
+**Workflow:**  
 Raw Data → Cleaning → Feature Engineering → EDA → Seaborn Visualization → Business Insights
 
-🎯 Business Questions
+---
 
-Area
+## 💡 Business Questions
 
-Question
+| Area | Question |
+|------|-----------|
+| 🏆 Products | Which products generate the highest revenue? |
+| 📦 Quantity | Which products have the highest quantity sold? |
+| 🌍 Countries | Which countries generate the most revenue? |
+| 💰 Revenue | How is transaction revenue distributed? |
+| 🧾 Transactions | Which countries have the most transaction records? |
+| 🔗 Relationships | Is there a relationship between quantity and unit price? |
+| 📊 Distribution | How does revenue distribution differ between countries? |
+| 🔥 Correlation | Which numerical variables are related? |
 
-🏆 Products
+---
 
-Which products generate the highest revenue?
+## 🧠 Project Workflow
+RAW DATA → DATA CLEANING → FEATURE ENGINEERING → EDA → SEABORN VISUALIZATION → INSIGHTS → CONCLUSION
 
-📦 Quantity
+---
 
-Which products have the highest quantity sold?
+## 🛠️ Tech Stack
 
-🌍 Countries
+| Technology | Purpose |
+|-------------|----------|
+| 🐍 Python | Core programming |
+| 🐼 Pandas | Data cleaning and manipulation |
+| 🔢 NumPy | Numerical operations |
+| 📈 Matplotlib | Plot control and customization |
+| 🎨 Seaborn | Main statistical visualization |
+| 📦 ucimlrepo | Dataset retrieval |
+| 📓 Jupyter Notebook | Analysis environment |
 
-Which countries generate the most revenue?
+---
 
-💰 Revenue
+## 🎨 Seaborn Visualization Journey
 
-How is transaction revenue distributed?
+### 📈 Distribution Analysis
+`histplot()` → `kdeplot()` → `boxplot()` → `violinplot()` → `displot()`  
+Understand revenue distribution, spread, density, and outliers.
 
-🧾 Transactions
+### 📊 Categorical Analysis
+`barplot()` → `countplot()` → `pointplot()` → `catplot()`  
+Compare products, countries, transaction counts, and averages.
 
-Which countries have the most transaction records?
+### 🔗 Relationship Analysis
+`scatterplot()` → `regplot()` → `pairplot()`  
+Study relationships, trends, and multiple numerical variables.
 
-🔗 Relationships
+### 🧩 Advanced Visualization
+`heatmap()` → `FacetGrid()`  
+Perform correlation analysis and group-based visual comparison.
 
-Is there a relationship between quantity and unit price?
+---
 
-📊 Distribution
+## 🗂️ Dataset
 
-How does revenue distribution differ between countries?
+**Source:** UCI Online Retail Dataset  
+**Key Columns:** Description, Quantity, InvoiceDate, UnitPrice, CustomerID, Country
 
-🔥 Correlation
+**Revenue Formula:**  
 
-Which numerical variables are related?
 
-🧠 Project Workflow
+\[
+\text{Revenue} = \text{Quantity} \times \text{UnitPrice}
+\]
 
-                    ┌───────────────┐
-                    │   RAW DATA    │
-                    └───────┬───────┘
-                            ↓
-                    ┌───────────────┐
-                    │ DATA CLEANING  │
-                    └───────┬───────┘
-                            ↓
-                    ┌───────────────┐
-                    │    FEATURE    │
-                    │  ENGINEERING  │
-                    └───────┬───────┘
-                            ↓
-                    ┌───────────────┐
-                    │     EDA       │
-                    └───────┬───────┘
-                            ↓
-                    ┌───────────────┐
-                    │   SEABORN     │
-                    │ VISUALIZATION │
-                    └───────┬───────┘
-                            ↓
-                    ┌───────────────┐
-                    │   INSIGHTS    │
-                    └───────┬───────┘
-                            ↓
-                    ┌───────────────┐
-                    │  CONCLUSION   │
-                    └───────────────┘
 
-🛠️ Tech Stack
 
-Technology
+---
 
-Purpose
+## 🧹 Data Preparation Steps
 
-🐍 Python
+- Remove duplicates  
+- Handle missing values  
+- Convert `InvoiceDate` to datetime  
+- Create `Revenue` feature  
+- Extract `Year`, `Month`, `Day`, `Hour`  
+- Create `YearMonth`  
+- Prepare data for visualization  
 
-Core programming
+---
 
-🐼 Pandas
+## 📊 KPI Analysis
 
-Data cleaning and manipulation
+| Metric | Description |
+|---------|--------------|
+| 💰 Total Revenue | Overall monetary value |
+| 📦 Total Quantity | Total items sold |
+| 🧾 Total Transactions | Number of invoices |
+| 🛍️ Total Products | Unique product count |
+| 👥 Total Customers | Unique customer count |
+| 🌍 Total Countries | Number of countries |
 
-🔢 NumPy
+---
 
-Numerical operations
+## 🔍 Visualization Approach
 
-📈 Matplotlib
+Each visualization answers a specific business question:
 
-Plot control and customization
+Business Question → Choose Plot → Create Visualization → Find Pattern → Interpret → Insight
 
-🎨 Seaborn
 
-Main statistical visualization
+**Example: Revenue Distribution**  
+→ `histplot()` / `kdeplot()` → Understand spread → Identify concentration & outliers  
 
-📦 ucimlrepo
+**Example: Quantity vs Unit Price**  
+→ `scatterplot()` / `regplot()` → Observe relationship & trend  
 
-Dataset retrieval
+**Example: Correlation**  
+→ `heatmap()` → Compare correlation values  
 
-📓 Jupyter Notebook
+---
 
-Analysis environment
-
-🎨 Seaborn Visualization Journey
-
-The project uses different Seaborn functions for different analytical questions.
-
-📈 Distribution Analysis
-
-histplot() → kdeplot() → boxplot() → violinplot() → displot()
-
-Used to understand revenue distribution, spread, density and outliers.
-
-📊 Categorical Analysis
-
-barplot() → countplot() → pointplot() → catplot()
-
-Used to compare products, countries, transaction counts and average values.
-
-🔗 Relationship Analysis
-
-scatterplot() → regplot() → pairplot()
-
-Used to study relationships, trends and multiple numerical variables.
-
-🧩 Advanced Visualization
-
-heatmap() → FacetGrid
-
-Used for correlation analysis and group-based visual comparison.
-
-📚 Seaborn Functions Covered
-
-Function
-
-Purpose
-
-histplot()
-
-Revenue and quantity distribution
-
-kdeplot()
-
-Smooth distribution
-
-boxplot()
-
-Spread and outlier detection
-
-violinplot()
-
-Distribution across categories
-
-barplot()
-
-Category comparison
-
-countplot()
-
-Transaction counts
-
-scatterplot()
-
-Numerical relationships
-
-regplot()
-
-Relationship with trend
-
-pointplot()
-
-Average values
-
-catplot()
-
-Categorical comparisons
-
-pairplot()
-
-Multiple numerical relationships
-
-heatmap()
-
-Correlation matrix
-
-FacetGrid
-
-Group-based comparison
-
-displot()
-
-Figure-level distribution
-
-🗂️ Dataset
-
-UCI Online Retail Dataset
-
-The project uses transaction data from an online retail store.
-
-Important Columns
-
-Description
-Quantity
-InvoiceDate
-UnitPrice
-CustomerID
-Country
-
-💰 Revenue Feature
-
-Revenue is calculated as:
-
-Revenue = Quantity × UnitPrice
-
-This feature is used to analyze the monetary value of transactions.
-
-🧹 Data Preparation
-
-The notebook performs the main preparation steps required for analysis:
-
-Remove duplicate records
-
-Handle missing values
-
-Convert InvoiceDate to datetime
-
-Create Revenue
-
-Extract Year
-
-Extract Month
-
-Extract Day
-
-Extract Hour
-
-Create YearMonth
-
-Prepare data for visualization
-
-📊 KPI Analysis
-
-The project calculates important business metrics:
-
-💰 Total Revenue
-📦 Total Quantity
-🧾 Total Transactions
-🛍️ Total Products
-👥 Total Customers
-🌍 Total Countries
-
-These KPIs provide a quick overview before deeper analysis.
-
-🔍 Visualization Approach
-
-Each visualization is connected to a specific analytical question.
-
-Business Question
-       ↓
-Choose Suitable Plot
-       ↓
-Create Visualization
-       ↓
-Find Pattern
-       ↓
-Interpret Result
-       ↓
-Business Insight
-
-Example — Revenue Distribution
-
-Question:
-How are transaction revenues distributed?
-
-        ↓
-
-histplot() / kdeplot()
-
-        ↓
-
-Understand distribution
-
-        ↓
-
-Identify concentration and outliers
-
-Example — Quantity vs Unit Price
-
-Question:
-Is there a relationship between quantity and price?
-
-        ↓
-
-scatterplot()
-
-        ↓
-
-regplot()
-
-        ↓
-
-Observe relationship and trend
-
-Example — Correlation
-
-Question:
-Which numerical variables are related?
-
-        ↓
-
-heatmap()
-
-        ↓
-
-Compare correlation values
-
-📁 Project Structure
+## 📁 Project Structure
 
 ecommerce-sales-customer-analysis/
 │
@@ -348,29 +147,24 @@ ecommerce-sales-customer-analysis/
 ├── 📦 requirements.txt
 └── 🚫 .gitignore
 
-⚡ Getting Started
 
-1. Clone the repository
 
+---
+
+## ⚡ Getting Started
+
+bash
+# Clone repository
 git clone https://github.com/YOUR-USERNAME/ecommerce-sales-customer-analysis.git
 cd ecommerce-sales-customer-analysis
 
-2. Install dependencies
-
+# Install dependencies
 pip install -r requirements.txt
 
-3. Start Jupyter Notebook
-
+# Launch Jupyter Notebook
 jupyter notebook
 
-Open:
-
-ecommerce_sales_customer_analysis.ipynb
-
-The notebook retrieves the UCI dataset using ucimlrepo.
-
 📦 Requirements
-
 pandas
 numpy
 matplotlib
@@ -379,84 +173,49 @@ ucimlrepo
 jupyter
 
 💡 What I Learned
+Python for data analysis
 
-Through this project, I practiced:
+Pandas for cleaning
 
-🐍 Python for data analysis
+NumPy for numerical operations
 
-🐼 Pandas data cleaning
+Matplotlib for visualization
 
-🔢 NumPy numerical operations
+Seaborn for statistical plots
 
-📈 Matplotlib visualization
+Exploratory Data Analysis (EDA)
 
-🎨 Seaborn statistical visualization
+Correlation and categorical comparison
 
-📊 Exploratory Data Analysis
+Business‑oriented interpretation
 
-🔗 Correlation analysis
+Main takeaway: choosing the right visualization for each analytical question.
 
-🌍 Categorical comparison
 
-🧩 Multi-variable visualization
+🧭** Learning Progress **
+PYTHON
+  ↓
+Pandas + NumPy + Matplotlib
+  ↓
+DATA ANALYSIS
+  ↓
+SEABORN
+  ↓
+Distribution • Categories • Relationships
+  ↓
+BUSINESS INSIGHTS
 
-💼 Business-oriented data interpretation
-
-📓 Building a complete data analysis workflow
-
-The main learning outcome was understanding which visualization to choose for a particular analytical question.
-
-🧭 Learning Progress
-
-                         PYTHON
-                            │
-             ┌──────────────┼──────────────┐
-             ↓              ↓              ↓
-          Pandas          NumPy        Matplotlib
-             └──────────────┼──────────────┘
-                            ↓
-                     DATA ANALYSIS
-                            ↓
-                         SEABORN
-                            │
-          ┌─────────────────┼─────────────────┐
-          ↓                 ↓                 ↓
-    Distribution       Categories       Relationships
-          └─────────────────┼─────────────────┘
-                            ↓
-                    BUSINESS INSIGHTS
-
-🚀 Future Improvements
-
-Customer Segmentation
-
-RFM Analysis
-
-Customer Lifetime Value
-
-Advanced Statistical Analysis
-
-Interactive Dashboard
-
-Advanced Seaborn Styling
-
-Machine Learning for Customer Behavior
 
 👨‍💻 Author
-
 <div align="center">
 
-Savan Sojitra
-
+Savan Sojitra  
 B.Tech Computer Science Student
-
 Python • Data Analysis • Visualization • AI Engineering
 
 <a href="https://github.com/YOUR-USERNAME">
 <img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
-
-<br><br>
 
 📊 DATA → 🔎 ANALYSIS → 🎨 VISUALIZATION → 💡 INSIGHT
 
@@ -465,7 +224,7 @@ Built with Python, Pandas, NumPy, Matplotlib & Seaborn
 </div>
 
 <div align="center">
-
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,50:2C5364,100:00C9A7&height=120&section=footer"/>
-
 </div>
+
+
